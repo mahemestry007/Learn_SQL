@@ -1,0 +1,68 @@
+DDL – Data Definition Language
+1)	CREATE 
+  
+  Syntax*
+CREATE TABLE 'table.name' (
+  );
+
+-EXAMPLE-
+
+  CREATE TABLE EMPDATA
+(
+EMP_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, -- SET PRIMARY KEY AND AUTO_INCREMENT CONSTRAINT
+FIRST_NAME VARCHAR(255), -- USE DATA TYPE SET AS 'CHAR'/'TEXT'
+LAST_NAME VARCHAR(255),
+DEPARTMENT CHAR(20) UNIQUE, -- UNIQUE CONSTRAINT
+CITY_NAME VARCHAR(20) DEFAULT "MUMBAI", -- USE DEFAULT CONSTRAINT, no need to mention in the table
+EMP_AGE INT CHECK (EMP_AGE>35), -- USE CHECK CONSTRAINT
+JOINING_DATE DATE, -- USE DATA TYPE SET AS 'DATE' A date. Format: YYYY-MM-DD
+SALARY INT,
+BLOOD_GP CHAR(5),
+Login_Time datetime, -- A date and time combination. Format: YYYY-MM-DD hh:mm: ss.
+Logout_Time Time, -- A time Format: hh:mm: ss.
+Retirement_Year Year, -- A year in four-digit format. Values allowed in four-digit format: 1901 to 2155, and 0000.
+CTC float -- (Cost To Company) Floating precision number data from -1.79E + 308 to 1.79E + 308.
+);
+
+2) DESCRIBE TABLE - To Describe your table
+syntax*
+DESC table.name;
+
+DESC EMPDATA;
++-----------------+--------------+------+-----+---------+----------------+
+| Field           | Type         | Null | Key | Default | Extra          |
++-----------------+--------------+------+-----+---------+----------------+
+| EMP_ID          | int          | NO   | PRI | NULL    | auto_increment |
+| FIRST_NAME      | varchar(255) | YES  |     | NULL    |                |
+| LAST_NAME       | varchar(255) | YES  |     | NULL    |                |
+| DEPARTMENT      | char(20)     | YES  | UNI | NULL    |                |
+| CITY_NAME       | varchar(20)  | YES  |     | MUMBAI  |                |
+| EMP_AGE         | int          | YES  |     | NULL    |                |
+| JOINING_DATE    | date         | YES  |     | NULL    |                |
+| SALARY          | int          | YES  |     | NULL    |                |
+| BLOOD_GP        | char(5)      | YES  |     | NULL    |                |
+| Login_Time      | datetime     | YES  |     | NULL    |                |
+| Logout_Time     | time         | YES  |     | NULL    |                |
+| Retirement_Year | year         | YES  |     | NULL    |                |
+| CTC             | float        | YES  |     | NULL    |                |
+| EMail_id        | varchar(50)  | YES  |     | NULL    |                |
++-----------------+--------------+------+-----+---------+----------------+
+  
+3) Create a COPY TABLE Using Another Table
+  
+  Syntax*
+CREATE TABLE 'table.name' AS
+SELECT * FROM 'old table.name';
+
+CREATE TABLE EMPDT AS
+SELECT * FROM EMPDATA;
+  
+  CREATE TABLE new_table_name AS
+    SELECT column1, column2,...
+    FROM existing_table_name
+    WHERE ....;
+
+-EXAMPLE-
+
+  
+  

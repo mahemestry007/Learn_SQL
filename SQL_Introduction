@@ -1,0 +1,23 @@
+-- Welcom To Introduction --
+
+Let learn together
+
+SQL is a standard database language used to access and manipulate database data. 
+SQL stands for Structured Query Language. SQL was developed by IBM Computer Scientists in the 1970s. 
+By executing queries SQL can create, update, delete, and retrieve data in databases like MySQL, Oracle, PostgreSQL, etc. 
+Overall SQL is a query language that communicates with databases.
+
+Structured Query Language(SQL) as we all know is the database language by the use of which we can perform certain operations on the existing database and also we can use this language to create a database. SQL uses certain commands like CREATE, DROP, INSERT, etc. to carry out the required tasks. 
+
+SQL commands are like instructions to a table. It is used to interact with the database with some operations. It is also used to perform specific tasks, functions, and queries of data. SQL can perform various tasks like creating a table, adding data to tables, dropping the table, modifying the table, set permission for users.
+
+These SQL commands are mainly categorized into five categories: 
+
+DDL – Data Definition Language
+DML – Data Manipulation Language
+TCL – Transaction Control Language
+DCL – Data Control Language
+DQL – Data Query Language
+
+Now, we will see all of these in detail.
+

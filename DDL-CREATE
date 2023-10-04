@@ -99,6 +99,21 @@ SELECT EMP_ID, FIRST_NAME, DEPARTMENT, SALARY
 FROM empdata
 WHERE EMP_ID = 1001;
 
+6) COPY EXISTING TABLE USING (LIMIT CLAUSE)
+
+# You can also use LIMIT to insert a specific number of records from an old table. 
+In the below example, it will populate a new table with the first 2 records. 
+
+Syntax*
+CREATE TABLE newtable_name AS
+SELECT * FROM old_table_name
+LIMIT 2;
+
+-EXAMPLE-
+CREATE TABLE TSTEM6 AS
+SELECT * FROM EMPDATA
+LIMIT 2;
+
 
 
 

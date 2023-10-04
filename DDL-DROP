@@ -1,0 +1,24 @@
+Differences Between DROP and TRUNCATE
+DROP	TRUNCATE
+In the drop table data and its definition is deleted with their full structure.	It preserves the structure of the table for further use exist but deletes all the data.
+Drop is used to eliminate existing complications and fewer complications in the whole database from the table.	Truncate is used to eliminate the tuples from the table.
+Integrity constraints get removed in the DROP command.	Integrity constraint doesn’t get removed in the Truncate command.
+ Since the structure does not exist, the View of the table does not exist in the Drop  command.	Since the structure exists, the View of the table exists in the Truncate command.
+ Drop query frees the table space complications from memory.	This query does not free the table space from memory.
+It is slow as there are so many complications compared to the TRUNCATE command.	It is fast as compared to the DROP command as there are fewer complications.
+
+
+  1) DROP
+  Syntax*
+
+  DROP TABLE table_name;
+
+  -EXAMPLE-
+  DROP TABLE EMPDATA;
+
+  2) TRUNCATE
+  Syntax*
+  TRUNCATE TABLE table_name;
+
+  -EXAMPLE-
+  TRUNCATE TABLE EMPDATA;

@@ -11,7 +11,13 @@ It is slow as there are so many complications compared to the TRUNCATE command.	
   1) DROP
   Syntax*
 
-  DROP TABLE table_name;
+# To delete the whole Table
+  DROP TABLE table_name; 
+
+# To delete the whole database
+ DROP DATABASE database_name; 
+
+
 
   -EXAMPLE-
   DROP TABLE EMPDATA;
@@ -22,3 +28,8 @@ It is slow as there are so many complications compared to the TRUNCATE command.	
 
   -EXAMPLE-
   TRUNCATE TABLE EMPDATA;
+
+Conclusion:
+Truncate is normally ultra-fast and it’s ideal for deleting data from a temporary table.
+Truncate preserves the structure of the table for future use, unlike drop table where the table is deleted with its full structure.
+Table or Database deletion using a DROP statement cannot be rolled back, so it must be used wisely.

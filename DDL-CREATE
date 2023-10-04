@@ -1,12 +1,11 @@
 DDL – Data Definition Language
 1)	CREATE 
   
-  Syntax*
-CREATE TABLE 'table.name' (
+Syntax*
+CREATE TABLE 'table_name' (
   );
 
 -EXAMPLE-
-
   CREATE TABLE EMPDATA
 (
 EMP_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, -- SET PRIMARY KEY AND AUTO_INCREMENT CONSTRAINT
@@ -28,6 +27,7 @@ CTC float -- (Cost To Company) Floating precision number data from -1.79E + 308 
 syntax*
 DESC table.name;
 
+-Example-
 DESC EMPDATA;
 +-----------------+--------------+------+-----+---------+----------------+
 | Field           | Type         | Null | Key | Default | Extra          |
@@ -48,21 +48,63 @@ DESC EMPDATA;
 | EMail_id        | varchar(50)  | YES  |     | NULL    |                |
 +-----------------+--------------+------+-----+---------+----------------+
   
-3) Create a COPY TABLE Using Another Table
-  
-  Syntax*
-CREATE TABLE 'table.name' AS
-SELECT * FROM 'old table.name';
+3) Create a COPY TABLE Using Another Table (COPY WHOLE TABLE)
 
+# We can also use CREATE TABLE to create a copy of an existing table. 
+In the new table, it gets the exact column definition all columns or specific columns can be selected.
+  
+Syntax*
+CREATE TABLE 'table_name' AS
+SELECT * FROM 'old table_name';
+
+-Example-
 CREATE TABLE EMPDT AS
 SELECT * FROM EMPDATA;
-  
-  CREATE TABLE new_table_name AS
-    SELECT column1, column2,...
-    FROM existing_table_name
-    WHERE ....;
+
+
+4) Create a COPY TABLE Using Another Table Column (COPY SELECTED COLUMNS)
+
+Syntax*
+CREATE TABLE new_table_name AS
+SELECT column1, column2,...
+FROM existing_table_name;
 
 -EXAMPLE-
+CREATE TABLE TESTDT AS
+SELECT EMP_ID, FIRST_NAME, DEPARTMENT, SALARY
+FROM EMPDATA;
 
+SELECT * FROM TESTDT;
++--------+------------+----------------+--------+
+| EMP_ID | FIRST_NAME | DEPARTMENT     | SALARY |
++--------+------------+----------------+--------+
+|   1001 | AJAY       | Human_Resource |  30000 |
+|   1002 | VIJAY      | Admin          |  35000 |
++--------+------------+----------------+--------+
   
-  
+5) Create a COPY TABLE Using Another Table Column (USING WHERE CLAUSE)
+
+# Here, we have taken the following three different SQL examples, 
+which will help you how to copy the content of one table into another table with a specific condition in SQL
+
+Syntax*
+CREATE TABLE new_table_name AS
+SELECT column1, column2,...
+FROM existing_table_name
+WHERE (CONDITION)'
+
+-EXAMPLE-
+CREATE TABLE TESTDT2 AS
+SELECT EMP_ID, FIRST_NAME, DEPARTMENT, SALARY
+FROM empdata
+WHERE EMP_ID = 1001;
+
+
+
+
+
+
+
+
+
+

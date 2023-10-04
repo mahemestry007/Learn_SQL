@@ -1,0 +1,36 @@
+# The ALTER TABLE statement in Structured Query Language allows you to add, modify, and delete columns of an existing table.  
+This statement also allows database users to add and remove various SQL constraints on the existing tables.
+Any user can also change the name of the table using this statement.
+
+  1) ALTER TABLE ADD Column statement in SQL
+  
+  Syntax*
+  ALTER TABLE table_name 
+  ADD column_name datatype;
+
+  e.g.
+  ALTER TABLE mahe_sql.empdata
+  ADD EMail_id varchar(50);
+
+  2) ALTER TABLE MODIFY Column statement in SQL
+  Syntax*
+
+
+  3) ALTER TABLE RENAME Column statement in SQL
+  Syntax*
+
+
+  4) ALTER TABLE RENAME Table_Name statement in SQL
+    Syntax*
+     ALTER TABLE old_Table_name
+    RENAME TO new_table_name;
+
+    e.g.
+    ALTER TABLE empdt	
+    RENAME TO EMPDATA;
+  
+
+
+  
+
+  

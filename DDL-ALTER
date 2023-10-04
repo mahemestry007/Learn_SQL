@@ -15,10 +15,22 @@ Any user can also change the name of the table using this statement.
   2) ALTER TABLE MODIFY Column statement in SQL
   Syntax*
 
+  ALTER TABLE table_name
+  modify column_name data_type;  -- Earlier column EMail_id data type was varcharm now its Int.
+
+  e.g.
+  ALTER TABLE mahe_sql.empdata
+  modify EMail_id int;
+
 
   3) ALTER TABLE RENAME Column statement in SQL
   Syntax*
+  ALTER TABLE table_name
+  RENAME COLUMN old_column_name to new_column_name;
 
+  e.g.
+  ALTER TABLE mahe_sql.empdata
+  RENAME COLUMN EMail_id to E_Mail;
 
   4) ALTER TABLE RENAME Table_Name statement in SQL
     Syntax*

@@ -1,0 +1,41 @@
+# The INSERT INTO statement of SQL is used to insert a new row/record in a table. 
+There are two ways of using the SQL INSERT INTO statement for inserting rows.
+
+1) By SQL insert into statement:
+2) Without specifying column names
+3) WITH 'WHERE' CLAUSE
+
+1) By SQL insert into select statement
+Syntax*
+INSERT INTO table_name (Column_name, Column_name, Column_name....)
+VALUES 
+(value1, value2, value3); 
+
+e.g.
+INSERT INTO mahe_sql.empdata
+(FIRST_NAME,LAST_NAME,DEPARTMENT,EMP_AGE,JOINING_DATE,SALARY,BLOOD_GP,Login_Time,Logout_Time,Retirement_Year,CTC)
+VALUES
+(1001, "AJAY", "SINGH", "Human_Resource", 36, "1995-01-25", 30000, "A+", "2023-01-01 09:25:05", "17:30:00", 2050, 4.50);
+
+2) Without specifying column names (Multiple Entries)
+
+INSERT INTO mahe_sql.empdata
+(FIRST_NAME,LAST_NAME,DEPARTMENT,EMP_AGE,JOINING_DATE,SALARY,BLOOD_GP,Login_Time,Logout_Time,Retirement_Year,CTC)
+VALUES
+(1001, "AJAY", "SINGH", "Human_Resource", 36, "1995-01-25", 30000, "A+", "2023-01-01 09:25:05", "17:30:00", 2050, 4.50),
+(1002, "VIJAY", "VERMA", "Admin", 38, "1994-06-30", 35000, "B+", "2023-01-01 09:00:05", "17:45:00", 2051, 5.00),
+(1003, "AJAY", "SINGH", "Human_Resource", 36, "1995-01-25", 30000, "A+", "2023-01-01 09:25:05", "17:30:00", 2050, 4.50);
+
+3) with 'WHERE' Clause specifying column names.
+Syntax*
+INSERT INTO new_table_name (EMP_ID, LAST_NAME, SALARY)
+SELECT EMP_ID, LAST_NAME, SALARY
+FROM old_table_name
+WHERE (where Condition);
+e.g.
+INSERT INTO EMPDT4 (EMP_ID, LAST_NAME, SALARY)
+SELECT EMP_ID, LAST_NAME, SALARY
+FROM mahe_sql.empdata
+WHERE EMP_ID = 1002;
+
+

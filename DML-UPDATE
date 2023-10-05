@@ -8,30 +8,36 @@ The SQL DELETE command uses a WHERE clause.
 UPDATE table_name 
 SET [column_name1= value1,... column_nameN = valueN] [WHERE condition];
 
+Syntax*
 UPDATE table_name  
 SET column_name = expression  
 WHERE conditions  
 
+e.g.
 UPDATE students  
 SET User_Name = 'beinghuman'  
-WHERE Student_Id = '3'  
+WHERE Student_Id = '3';
 
 2) Updating Multiple Fields:
 If you are going to update multiple fields, you should separate each field assignment with a comma.
 
 SQL UPDATE statement for multiple fields:
 
+Syntax*
 UPDATE table_name  
 SET field1 = new-value1, field2 = new-value2,  
 [WHERE CLAUSE]  
 
-SQL UPDATE SELECT:
+e.g. 
+UPDATE employee  
+SET CITY = "MUMBAI", AGE = 30, DESIGNATION = "ADMIN" 
+WHERE EMP_ID = 1004;  
 
-SQL UPDATE WITH SELECT QUERY:
 
-3) We can use SELECT statement to update records through UPDATE statement.
+3) SQL UPDATE WITH SELECT QUERY:
+We can use the SELECT statement to update records through the UPDATE statement.
 
-SYNTAX:
+Syntax*
 
 UPDATE tableDestination  
 SET tableDestination.col = value  
@@ -41,6 +47,9 @@ FROM  tblSource
 WHERE tblSource.join_col = tblDestination. Join_col  
 AND  tblSource.Constraint = value)  
 
+* The SQL EXISTS Operator
+The EXISTS operator is used to test for the existence of any record in a subquery.
+The EXISTS operator returns TRUE if the subquery returns one or more records.
 
 
 

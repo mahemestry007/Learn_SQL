@@ -1,0 +1,46 @@
+- SQL UPDATE -
+
+In a very simple way, we can say that SQL commands(UPDATE and DELETE) 
+are used to change the data that is already in the database. 
+The SQL DELETE command uses a WHERE clause.
+
+1) The UPDATE statement can be written in the following form:
+UPDATE table_name 
+SET [column_name1= value1,... column_nameN = valueN] [WHERE condition];
+
+UPDATE table_name  
+SET column_name = expression  
+WHERE conditions  
+
+UPDATE students  
+SET User_Name = 'beinghuman'  
+WHERE Student_Id = '3'  
+
+2) Updating Multiple Fields:
+If you are going to update multiple fields, you should separate each field assignment with a comma.
+
+SQL UPDATE statement for multiple fields:
+
+UPDATE table_name  
+SET field1 = new-value1, field2 = new-value2,  
+[WHERE CLAUSE]  
+
+SQL UPDATE SELECT:
+
+SQL UPDATE WITH SELECT QUERY:
+
+3) We can use SELECT statement to update records through UPDATE statement.
+
+SYNTAX:
+
+UPDATE tableDestination  
+SET tableDestination.col = value  
+WHERE EXISTS (  
+SELECT col2.value  
+FROM  tblSource  
+WHERE tblSource.join_col = tblDestination. Join_col  
+AND  tblSource.Constraint = value)  
+
+
+
+

@@ -64,5 +64,15 @@ e.g
 The EXISTS operator is used to test for the existence of any record in a subquery.
 The EXISTS operator returns TRUE if the subquery returns one or more records.
 
+3) UPDATE STATEMENT USE WHERE AND IN CLAUSE
+
+update table.name
+SET column.name = 
+WHERE column.name IN (123);
+
+update subquery.employees
+set RepoManager = "Don"
+Where Employeeid in (2,5,7);
+
 
 
